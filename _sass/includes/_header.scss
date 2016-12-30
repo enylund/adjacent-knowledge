@@ -1,0 +1,26 @@
+.header__site-title{
+  @include margin-top-medium;
+  @include font--small;
+}
+
+.post__content {
+  @include margin-top-medium;
+  @include font--display;
+  word-break: break-all;
+  a{
+    text-decoration: none;
+    color: $black;
+    &:hover{
+      text-decoration: none;
+      color: $black;
+    }
+    &:visited{
+      text-decoration: none;
+      color: $black;
+    }
+  }
+
+  p {
+    margin-top: 0px;
+  }
+}
