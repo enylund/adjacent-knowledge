@@ -18,8 +18,14 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build Settings
+gems: [jekyll-assets]
 sass:
   sass_dir: _sass
 include: ['_pages']
 kramdown:
   input: GFM
+# Assets Pipeline
+assets:
+  sources:
+    - _assets
+    - _assets/fonts
