@@ -23,3 +23,5 @@ sass:
 include: ['_pages']
 kramdown:
   input: GFM
+gems:
+  - jekyll-bootstrap-sass

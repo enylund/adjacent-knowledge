@@ -1,0 +1,6 @@
+@mixin type-generator($font-size, $letter-spacing, $xs-ratio: 1.2, $sm-ratio: 1.1, $md-ratio: 1.05, $vert-ratio: null) {
+
+  font-size:      round($font-size   / $xs-ratio);
+  letter-spacing: $letter-spacing    / $xs-ratio;
+
+}

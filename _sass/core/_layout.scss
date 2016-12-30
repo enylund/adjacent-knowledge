@@ -1,0 +1,199 @@
+/////////////////////////////////////////////////////////////////////////
+//
+// JUMEX LAYOUT
+//
+/////////////////////////////////////////////////////////////////////////
+
+// Layout variables
+
+$gutter: 15px;
+
+$space-tiny    : 5px;
+$space-small   : $gutter;
+$space-medium  : 37px;
+$space-xmedium : 40px;
+$space-large   : 75px;
+$space-huge    : 100px;
+
+$site-max-width: 1400px;
+
+//
+// Margin
+//
+
+@mixin margin-top-none        { margin-top: 0; }
+@mixin margin-top-tiny        { margin-top: $space-tiny; }
+@mixin margin-top-small       { margin-top: $space-small; }
+@mixin margin-top-medium      { margin-top: $space-medium; }
+@mixin margin-top-xmedium     { margin-top: $space-xmedium; }
+@mixin margin-top-large       { margin-top: $space-large; }
+@mixin margin-top-huge        { margin-top: $space-huge; }
+
+@mixin margin-right-none      { margin-right: 0 }
+@mixin margin-right-tiny      { margin-right: $space-tiny; }
+@mixin margin-right-small     { margin-right: $space-small; }
+@mixin margin-right-medium    { margin-right: $space-medium; }
+@mixin margin-right-xmedium   { margin-right: $space-xmedium; }
+@mixin margin-right-large     { margin-right: $space-large; }
+@mixin margin-right-huge      { margin-right: $space-huge; }
+
+@mixin margin-bottom-none     { margin-bottom: 0 }
+@mixin margin-bottom-tiny     { margin-bottom: $space-tiny; }
+@mixin margin-bottom-small    { margin-bottom: $space-small; }
+@mixin margin-bottom-medium   { margin-bottom: $space-medium; }
+@mixin margin-bottom-xmedium  { margin-bottom: $space-xmedium; }
+@mixin margin-bottom-large    { margin-bottom: $space-large; }
+@mixin margin-bottom-huge     { margin-bottom: $space-huge; }
+
+@mixin margin-left-none       { margin-left: 0 }
+@mixin margin-left-tiny       { margin-left: $space-tiny; }
+@mixin margin-left-small      { margin-left: $space-small; }
+@mixin margin-left-medium     { margin-left: $space-medium; }
+@mixin margin-left-xmedium    { margin-left: $space-xmedium; }
+@mixin margin-left-large      { margin-left: $space-large; }
+@mixin margin-left-huge       { margin-left: $space-huge; }
+
+
+//
+// Padding
+//
+
+@mixin padding-top-none       { padding-top: 0 }
+@mixin padding-top-tiny       { padding-top: $space-tiny; }
+@mixin padding-top-small      { padding-top: $space-small; }
+@mixin padding-top-medium     { padding-top: $space-medium; }
+@mixin padding-top-xmedium    { padding-top: $space-xmedium; }
+@mixin padding-top-large      { padding-top: $space-large; }
+@mixin padding-top-huge       { padding-top: $space-huge; }
+
+@mixin padding-right-none     { padding-right: 0 }
+@mixin padding-right-tiny     { padding-right: $space-tiny; }
+@mixin padding-right-small    { padding-right: $space-small; }
+@mixin padding-right-medium   { padding-right: $space-medium; }
+@mixin padding-right-xmedium  { padding-right: $space-xmedium; }
+@mixin padding-right-large    { padding-right: $space-large; }
+@mixin padding-right-huge     { padding-right: $space-huge; }
+
+@mixin padding-bottom-none    { padding-bottom: 0 }
+@mixin padding-bottom-tiny    { padding-bottom: $space-tiny; }
+@mixin padding-bottom-small   { padding-bottom: $space-small; }
+@mixin padding-bottom-medium  { padding-bottom: $space-medium; }
+@mixin padding-bottom-xmedium { padding-bottom: $space-xmedium; }
+@mixin padding-bottom-large   { padding-bottom: $space-large; }
+@mixin padding-bottom-huge    { padding-bottom: $space-huge; }
+
+@mixin padding-left-none      { padding-left: 0 }
+@mixin padding-left-tiny      { padding-left: $space-tiny; }
+@mixin padding-left-small     { padding-left: $space-small; }
+@mixin padding-left-medium    { padding-left: $space-medium; }
+@mixin padding-left-xmedium   { padding-left: $space-xmedium; }
+@mixin padding-left-large     { padding-left: $space-large; }
+@mixin padding-left-huge      { padding-left: $space-huge; }
+
+
+//
+// Centering
+//
+
+@mixin margin-center          { margin-left: auto; margin-right: auto;}
+
+.site-max-width {
+  max-width: $site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//
+// Magic Module positioning
+//
+
+.magic-modules {
+
+  @include breakpoint(sm) {
+    margin-top: 0px;
+  }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+//
+// BOOTSTRAP VARIABLES
+//
+/////////////////////////////////////////////////////////////////////////
+
+// For a complete list of Bootstrap variables, see:
+// https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  $breakpoint-extra-small;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  $breakpoint-small;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  $breakpoint-medium;
+$screen-md-min:              $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  $breakpoint-large;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         $gutter * 2;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop;

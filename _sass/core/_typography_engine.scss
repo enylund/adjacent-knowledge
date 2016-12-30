@@ -1,0 +1,143 @@
+///////////////////////////////////////////////////
+// Typography Variables
+///////////////////////////////////////////////////
+
+//
+// Font stacks
+//
+$font-stack__regular              : 'suisse_jumex_regular', 'Arial', sans-serif;
+$font-stack__mono                 : 'suisse_bp_mono_regular', 'Courier', sans-serif;
+
+///////////////////////////////////////////////////
+// Typography definitions
+///////////////////////////////////////////////////
+
+
+
+/////////////////////////
+// Regular font family //
+/////////////////////////
+
+// Regular - Small
+@mixin font--small {
+  font-size: 16px;
+  letter-spacing : 0;
+  line-height    : 19px;
+  font-family: $font-stack__regular;
+}
+.show .font--small {
+  @include font--small;
+}
+
+// Regular - Caption
+@mixin font--caption {
+  font-size: 20px;
+  letter-spacing : 0;
+  line-height    : 24px;
+  font-family: $font-stack__regular;
+}
+.show .font--caption {
+  @include font--caption;
+}
+
+// Regular - Body
+@mixin font--body {
+  font-size: 24px;
+  letter-spacing : 0;
+  line-height    : 29px;
+  font-family: $font-stack__regular;
+}
+.show .font--body {
+  @include font--body;
+}
+
+// Regular - Subheader
+@mixin font--subheader {
+  font-size: 29px;
+  letter-spacing : 0;
+  line-height    : 30px;
+  font-family: $font-stack__regular;
+  text-transform: uppercase;
+}
+.show .font--subheader {
+  @include font--subheader;
+}
+
+// Regular - Title
+@mixin font--title {
+  font-size: 35px;
+  letter-spacing : 0;
+  line-height    : 35px;
+  font-family: $font-stack__regular;
+  text-transform: uppercase;
+}
+
+.show .font--title {
+  @include font--title;
+}
+
+// Regular - Headline
+@mixin font--headline {
+  font-size: 51px;
+  letter-spacing : 0;
+  line-height    : 51px;
+  font-family: $font-stack__regular;
+  text-transform: uppercase;
+}
+
+.show .font--headline {
+  @include font--headline;
+}
+
+// Regular - Display
+@mixin font--display {
+  font-size: 63px;
+  letter-spacing : 0;
+  line-height    : 53px;
+  font-family: $font-stack__regular;
+  text-transform: uppercase;
+}
+.show .font--display {
+  @include font--display;
+}
+
+//////////////////////
+// Mono font family //
+//////////////////////
+
+//Mono - Large
+@mixin font-mono--large {
+  font-size: 20px;
+  letter-spacing : 0;
+  line-height    : 29px;
+  font-family: $font-stack__mono;
+}
+.show .font-mono--large {
+  @include font-mono--large;
+}
+
+//Mono - Medium
+@mixin font-mono--medium {
+  font-size: 17px;
+  letter-spacing : -0;
+  line-height    : 22px;
+  font-family: $font-stack__mono;
+}
+.show .font-mono--medium {
+  @include font-mono--medium;
+}
+
+//Mono - small
+@mixin font-mono--small {
+  font-size: 14px;
+  letter-spacing : -0;
+  line-height    : 19px;
+  font-family: $font-stack__mono;
+}
+
+.show .font-mono--small {
+  @include font-mono--small;
+}
+
+
+

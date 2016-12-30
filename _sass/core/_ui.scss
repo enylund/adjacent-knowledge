@@ -1,0 +1,461 @@
+/////////////////////////////////////////////////////////////////////////
+//
+// JUMEX USER INTERFACE
+//
+/////////////////////////////////////////////////////////////////////////
+
+
+// Variables
+$scaffold-height: 6px;
+$scaffold-width: 6px;
+$overlap: -70px;
+$carouselCellMargin: 350px;
+
+// Scaffold
+@mixin scaffold-bar {
+  background: $black;
+  height: $scaffold-height;
+  z-index: 1;
+}
+
+@mixin scaffold-bar--white {
+  background: $white;
+  height: $scaffold-height;
+  z-index: 1;
+}
+
+@mixin scaffold-bar-vertical {
+  background: $black;
+  width: $scaffold-width;
+  z-index: 1;
+}
+
+
+// Links
+
+@mixin nav-link {
+  a {
+    color: $black;
+    text-decoration: none;
+    &:visited {
+      color: $black;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+    &:active {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin blank-link {
+  a {
+    text-decoration: none;
+    color: $black;
+    &:visited {
+      text-decoration: none;
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $black;
+    }
+    &:active {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+@mixin opacity-link {
+  a {
+    text-decoration: none;
+    color: $black;
+    transition: 0.25s;
+    &:visited {
+      text-decoration: none;
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $black;
+      color: rgba(0, 0, 0, 0.25);
+    }
+    &:active {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+@mixin underline-link {
+  a {
+    text-decoration: none;
+    border-bottom: solid $black 2px;
+    color: $black;
+
+    &:visited {
+      text-decoration: none;
+      border-bottom: solid $black 2px;
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+      border-bottom: none;
+      color: $black;
+    }
+    &:active {
+      text-decoration: none;
+      border-bottom: solid $black 2px;
+      color: $black;
+    }
+  }
+}
+
+// Navigation Elements
+@mixin nav-elements {
+  padding-left: 33px;
+  a:before {
+    content: '';
+    height: 33px;
+    width: 33px;
+    border: solid $black 3px;
+    position:absolute;
+    left:43px;
+    margin-top: 4px;
+    border-radius: 50%;
+  }
+  a:hover:before {
+    content: '';
+    height: 33px;
+    width: 33px;
+    background: $black;
+    border: solid $black 3px;
+    position:absolute;
+    left:43px;
+    margin-top: 4px;
+    border-radius: 50%;
+  }
+
+  a:hover {
+    color: $black;
+  }
+
+}
+
+// Remove List Styles
+@mixin  remove-list-styles {
+  ul {
+    list-style: none;
+  }
+}
+
+// Shadows
+@mixin add-shadow($color) {
+  box-shadow: 0 0 3em $color;
+}
+
+
+// Spacer
+.spacer-module {
+  @include margin-bottom-small;
+  @include breakpoint(sm) {
+    @include margin-bottom-medium;
+  }
+}
+
+// Buttons
+.button {
+  max-width: 300px;
+  max-height: 250px;
+  min-width: 275px;
+  padding: 30px 50px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  stroke: #1D1D1B;
+  stroke-width: 5px;
+
+  text-align: center;
+
+  svg * {
+    vector-effect: non-scaling-stroke;
+  }
+
+a {
+    color: #1D1D1B;
+    &:visited {
+      color: #1D1D1B;
+    }
+    &:hover {
+      color: #1D1D1B;
+      text-decoration: none;
+    }
+    &:active {
+      color: #1D1D1B;
+    }
+  }
+}
+
+.button__link {
+  @include font-mono--small;
+  display: inline-block;
+}
+
+.button__link__text {
+  @include font-mono--small;
+  display: inline-block;
+
+}
+
+.button__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+// Background color
+
+.black-full-width-background {
+  background: $black;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+.white-full-width-background {
+  background: $white;
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+
+// Highlight color
+.show {
+  ::selection {
+    color: $white;
+    background: $black;
+  }
+}
+
+
+/* PERMANENT SITE */
+
+
+/* Carousel */
+.show .flickity-page-dots{
+  @include margin-right-large;
+  bottom:-50px;
+}
+.show .flickity-page-dots .dot{
+  background: rgba(0,0,0,0);
+  border:2px solid $black;
+  opacity: 1;
+  height:25px;
+  float: right;
+  width:25px;
+}
+.show .flickity-page-dots .dot.is-selected{
+  background: $black;
+}
+
+/* side title */
+
+.show .side-title{
+  display: inline-block;
+  @include font--body;
+  text-align: center;
+  display: block;
+  font-weight: normal;
+  @include breakpoint(sm){
+    position: absolute;
+    margin:0;
+    margin-top:200px;
+    transform-origin:0 0;
+    transform: rotate(-90deg);
+    -webkit-transform-origin:0 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform-origin:0 0;
+    -moz-transform: rotate(-90deg);
+    -ms-transform-origin:0 0;
+    -ms-transform: rotate(-90deg);
+    -o-transform-origin:0 0;
+    -o-transform: rotate(-90deg);
+  }
+
+}
+
+
+/* item grid */
+
+.item-caption__date{
+  @include font-mono--medium;
+  @include margin-bottom-small;
+  @include margin-top-medium;
+}
+.item-caption__title{
+  @include font--title;
+  font-style: italic;
+}
+.item-grid__item-wrapper{
+  @include margin-bottom-large;
+}
+
+.item-wrapper__slide{
+  width:100%;
+}
+.item-grid__item-img{
+  width:100%;
+  height:300px;
+  background-position: 50% 50%;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+// POST SCROLL
+.post-scroll{
+  background: $black;
+  position:fixed;
+  bottom:0;
+  z-index: -1;
+  width:100%;
+}
+.post-scroll__inner{
+  @include padding-top-large;
+  @include padding-bottom-large;
+}
+
+.post-scroll .side-title{
+  color: $white;
+
+}
+.post-scroll__credits{
+  color: $white;
+  @include font--small;
+}
+.post-scroll .side-title{
+  @include breakpoint(sm){
+    margin-top:100px;
+  }
+
+}
+//mm
+.magic-module-group{
+  overflow:hidden;
+}
+.magic-module-group--blog-cluster, .magic-module-group--button-module--big, .magic-module-group--button-module--normal, .magic-module-group--fomento-list-module{
+   @include padding-bottom-large;
+}
+
+.magic-module{
+  @include padding-bottom-large;
+  overflow:hidden;
+}
+.magic-module-group--button-module--huge{
+  @include padding-bottom-medium;
+}
+
+.fomento-list-module.magic-module, .cluster-modal-button-module.magic-module, .blog-video-module.magic-module, .blog-news-module.magic-module{
+  padding-bottom:0;
+}
+
+.magic-module-group.mm-TitleOverlayModule {
+  padding-bottom:0;
+  overflow:auto;
+}
+.mm-FomentoListModule .fomento-list-module:last-child .fomento-list__wrapper{
+  border:none;
+}
+
+//Button styles
+.button-wrapper-small {
+  @include font--caption;
+  border: solid $black 3px;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.button-module a.button-wrapper-small__link{
+  margin-bottom: 0;
+}
+a.button-wrapper-small__link{
+  @include margin-bottom-small;
+  display: inline-block;
+  text-decoration: underline;
+  color: $black;
+  &:visited {
+    text-decoration: underline;
+    color: $black;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background: $black;
+  }
+  &:active {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.infinite-button {
+  text-align:center;
+  @include margin-bottom-medium;
+
+  .button-wrapper-small:hover {
+    background: $black;
+    a {color: $white}
+  }
+
+  a{
+    display: block !important;
+    width:100% !important;
+    height:100% !important;
+    text-decoration: none;
+    color: $black;
+    &:visited {
+      text-decoration: underline;
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      background: $black;
+    }
+    &:active {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+
+// Effects
+@mixin grayscale-animation {
+  filter: grayscale(100%);
+  transition: filter 0.75s;
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+  }
+}
+
+//Blog mm
+.magic-module-group--blog-cluster .magic-module > div{
+  @include margin-bottom-small;
+}
+
+
+.front-end {
+  opacity: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}

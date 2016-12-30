@@ -1,0 +1,10 @@
+///////////////////////////////////////////////////
+// Typography
+///////////////////////////////////////////////////
+
+@mixin magic-module__headline {
+  @include font--body;
+  @include margin-bottom-medium;
+  text-transform: uppercase;
+  text-align: center;
+}
