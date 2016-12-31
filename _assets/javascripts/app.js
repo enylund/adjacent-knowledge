@@ -67,7 +67,7 @@ App = {
 // On Page load
 //////////////////////////////////////////////////////////////
 
-$(document).on('page:load ready page:restore', function() {
+$(document).ready( function() {
   App.runFunctions(App.pageInit);
   App.runFunctions(App.pageResize);
   App.runFunctions(App.pageScroll);

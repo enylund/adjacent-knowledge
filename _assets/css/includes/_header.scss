@@ -1,6 +1,7 @@
 .header__site-title{
   @include margin-top-medium;
   @include font--small;
+  color: $black;
 }
 
 .post__content {
