@@ -101,6 +101,18 @@ $font-stack__mono                 : 'suisse_bp_mono_regular', 'Courier', sans-se
   @include font--display;
 }
 
+// Regular - Jumbo
+@mixin font--jumbo {
+  font-size: 115px;
+  letter-spacing : 0;
+  line-height    : 94px;
+  font-family: $font-stack__regular;
+  text-transform: uppercase;
+}
+.show .font--display {
+  @include font--display;
+}
+
 //////////////////////
 // Mono font family //
 //////////////////////

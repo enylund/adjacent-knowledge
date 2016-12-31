@@ -18,7 +18,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build Settings
-gems: [jekyll-assets]
+gems: [jekyll-assets, bootstrap-sass]
 include: ['_pages']
 kramdown:
   input: GFM

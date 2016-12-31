@@ -6,6 +6,11 @@
 .post__content {
   @include margin-top-medium;
   @include font--display;
+
+  @include breakpoint(sm) {
+    @include font--jumbo;
+  }
+
   word-break: break-all;
   a{
     text-decoration: none;
