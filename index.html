@@ -1,9 +1,23 @@
 ---
 layout: default
 ---
+<div class="homepage--overlay">
+  {% for p in site.categories.about %}
+    <div class="site-max-width">
+      <div class="row" >
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="homepage--overlay__post-content">
+            {{ p.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
 <div class="site-max-width">
   <div class="row" >
-    {% for post in site.posts %}
+    {% for post in site.categories.google_doc_url %}
       <div class="col-sm-12">
         <div class="post__content">
           {{ post.content }}

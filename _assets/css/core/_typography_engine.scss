@@ -67,9 +67,8 @@ $font-stack__mono                 : 'suisse_bp_mono_regular', 'Courier', sans-se
 @mixin font--title {
   font-size: 35px;
   letter-spacing : 0;
-  line-height    : 35px;
+  line-height    : 55px;
   font-family: $font-stack__regular;
-  text-transform: uppercase;
 }
 
 .show .font--title {
