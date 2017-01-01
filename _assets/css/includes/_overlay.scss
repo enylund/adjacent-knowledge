@@ -1,14 +1,18 @@
 .homepage--overlay {
-  min-height: 80vh;
-  width: 100vw;
-  background-color: #FFA10D;
-  z-index: 1;
-  position:fixed;
-  left:0px;
-  right:0px;
-  top:-80vh;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  display: none;
+  @include breakpoint(sm) {
+    display: inline-block;
+    min-height: 80vh;
+    width: 100vw;
+    background-color: #FFA10D;
+    z-index: 1;
+    position:fixed;
+    left:0px;
+    right:0px;
+    top:-80vh;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  }
   &.active {
     top: 0vh;
   }
